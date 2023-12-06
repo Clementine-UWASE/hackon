@@ -80,28 +80,6 @@
     <div id="error-message" class="error"></div>
 </div>
 
-<script>
-    function validateForm() {
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
-        var errorMessage = document.getElementById('error-message');
-
-        errorMessage.innerHTML = '';
-
-        if (name === '' || email === '' || message === '') {
-            errorMessage.innerHTML = 'All fields are required';
-            return;
-        }
-
-        
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
-
-        
-    }
-</script>
 
 </body>
 </html>
