@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop with Us - Coffee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(151, 147, 147);
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: grid;
+            gap: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px;
+            background-color: #af4c4c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #af4c4c;
+        }
+
+        .cart {
+            margin-top: 20px;
+        }
+
+        #cart-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #dddddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>shop with us</h1>
+</header>
+
+<div class="container">
+    <div class="product" id="product1">
+        <img src="coffe.jpg">
+        <h3>Coffee1</h3>
+        <p>A rich blend of Arabica and Robusta beans. Perfect for a smooth and bold cup of coffee.</p>
+        <p>5000rwf</p>
+        <button onclick="addToCart('Coffee Blend 1', 10.99)">Add to Cart</button>
+    </div>
+
+    <div class="product" id="product2">
+        <img src="cfe1.jpg" alt="Coffee 2">
+        <h3>Coffee2</h3>
+        <p>A medium roast with hints of caramel and chocolate. Ideal for those who prefer a sweeter taste.</p>
+        <p>4000rwf</p>
+        <button onclick="addToCart('Coffee Blend 2', 12.99)">Add to Cart</button>
+    </div>
+    <div class="product" id="product2">
+        <img src="cf2.jpg" alt="Coffee 2">
+        <h3>Coffee3</h3>
+        <p>A medium roast with hints of caramel and chocolate. Ideal for those who prefer a sweeter taste.</p>
+        <p>3500rwf</p>
+        <button onclick="addToCart('Coffee Blend 2', 17.45)">Add to Cart</button>
+    </div>
+
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-list"></ul>
+        <p>Total: rwf<span id="cart-total">0.00</span></p>
+    </div>
+</div>
+
+<script>
+    var cart = [];
+
+    function addToCart(productName, price) {
+        var cartItem = {
+            productName: productName,
+            price: price
+        };
+
+        cart.push(cartItem);
+
+        
+        updateCartUI();
+    }
+
+    function updateCartUI() {
+        var cartList = document.getElementById('cart-list');
+        var cartTotal = document.getElementById('cart-total');
+        var total = 0;
+
+        
+        cartList.innerHTML = '';
+
+        // Populate the cart list
+        cart.forEach(function (item) {
+            var listItem = document.createElement('li');
+            listItem.className = 'cart-item';
+            listItem.innerHTML = '<span>' + item.productName + '</span><span>$' + item.price.toFixed(2) + '</span>';
+            cartList.appendChild(listItem);
+
+           
+            total += item.price;
+        });
+
+        // Update the total amount
+        cartTotal.textContent = total.toFixed(2);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+  
+  /* Basic styling for the website */
+  body ,pre {
+    font-family: Arial, sans-serif;
+   }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding:12px;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding:12px;
+  }
+  header nav ul li a :hover{
+    color:yellow;
+  }
+  .main {
+    padding: 20px 0;
+  }
+  
+  .about-section{
+    background-color:rgba(0, 0, 0, 0.855);
+    color: white;
+  }
+  .products-section{
+    padding: 40px 0;
+  background-color: #6a6868;
+  }
+  .contact-section{
+background-color: rgba(0, 0, 0, 0.836);
+color: white;
+  }
+  button{
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+   border: 2px solid red;
+  }
+  button:hover{
+   color:rgb(250, 245, 115)
+  }
