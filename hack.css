@@ -1,62 +1,228 @@
 
-  
-  /* Basic styling for the website */
-  body ,pre {
-    font-family: Arial, sans-serif;
-   }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  
-  header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  header nav ul {
-    list-style: none;
-    padding:12px;
-  }
-  
-  header nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding:12px;
-  }
-  header nav ul li a :hover{
-    color:yellow;
-  }
-  .main {
-    padding: 20px 0;
-  }
-  
-  .about-section{
-    background-color:rgba(0, 0, 0, 0.855);
-    color: white;
-  }
-  .products-section{
-    padding: 40px 0;
-  background-color: #6a6868;
-  }
-  .contact-section{
-background-color: rgba(0, 0, 0, 0.836);
-color: white;
-  }
-  button{
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-   border: 2px solid red;
-  }
-  button:hover{
-   color:rgb(250, 245, 115)
-  }
+/* General styles */
+          body {
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+           background-image: url('cge.jpeg');
+           background-size: cover;
+           background-position: center;
+           color: azure;
+       }
+       footer,a{
+           margin-left: 20px;
+           text-decoration: none;
+           color: rgb(255, 251, 246);
+         
+       }
+       header {
+           text-align: center;
+           padding: 20px 0;
+           background: rgba(255, 255, 255, 0.7);
+       }
+form,h2,input{
+   color: #000;
+}
+nav {
+           background: rgba(0, 0, 0, 0.7);
+           padding: 10px 0;
+           width: 100%;
+           
+       }
+       .container {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+       
+           margin: 0 auto;
+           padding: 0 20px;
+           max-width:900px;
+           margin: 0 auto;
+       }
+       nav img {
+           border-radius: 50%;
+           height: 30px;
+       }
+       nav ul {
+           display: flex;
+           list-style: none;
+           margin: 0;
+           padding: 0;
+       }
+       nav ul li {
+           margin-right: 20px;
+       }
+       nav ul li a {
+           color: white;
+           text-decoration: none;
+           transition: color 0.3s ease;
+       }
+       nav ul li a:hover {
+           color: #ffcc00;
+       }
+       nav ul li button {
+           background: none;
+           border: none;
+       }
+       nav ul li button a {
+           color: white;
+           text-decoration: none;
+       padding:5px;
+           border: 1px solid #ffcc00;
+           border-radius: 5px;
+           transition: background-color 0.3s ease;
+       }
+       nav ul li button a:hover {
+           background-color: #ffcc00;
+           color: #000;
+       }
+       
+       
+       h1 {
+           margin: 0;
+           color: white;
+       }
+       @media screen and (max-width: 768px) {
+           nav ul {
+               
+               position: absolute;
+               top: 60px;
+               left: 0;
+               width: 100%;
+               flex-direction: column;
+               background-color: rgba(0, 0, 0, 0.7);
+           }
+           nav ul.active {
+               display: flex;
+           }
+           nav ul li {
+               text-align: center;
+               margin: 10px 0;
+           }
+       }
+     
+   h1, h2, p ,h3{
+           color: white;
+           text-align: center;
+       }
+       header h1 {
+           margin: 0;
+           font-family: 'Pacifico', cursive;
+           font-size: 40px;
+       }
+       .hero {
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           padding: 50px 0;
+       }
+       .cta {
+           text-align: center;
+       }
+       .about-section,
+       .products-section,
+       .service-section {
+           padding: 50px;
+           background: rgba(0, 0, 0, 0.7);
+           margin: 20px;
+           border-radius: 10px;
+       }
+       .product-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           gap: 20px;
+           align-items: center;
+           justify-content: center;
+       }
+       .product-details {
+           text-align: left;
+           font-size: 18px;
+           line-height: 1.6;
+           margin: 0;
+       }
+       .product-img {
+           width: 100%;
+           height: auto;
+           border-radius: 10px;
+       }
+       .login-container {
+   width: 300px;
+   padding:30px;
+
+ }
+ 
+ .login-form {
+   background-color:white;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ h2 {
+   color: #ffffff;
+   margin-bottom: 20px;
+ }
+ 
+ .input-group {
+   margin-bottom: 15px;
+   margin-right:30px;
+ }
+ 
+ label {
+   display: block;
+   margin-bottom: 5px;
+ }
+ 
+ input
+{
+   width: 100%;
+   padding: 8px;
+   border-radius: 4px;
+   border: 1px solid rgb(212, 210, 210);
+ }
+ 
+ button {
+   width: 100%;
+   padding: 10px;
+   border: none;
+   border-radius: 4px;
+   background-color: rgb(18, 80, 42);
+   color: white;
+   cursor: pointer;
+ }
+ 
+ button:hover {
+   background-color: rgb(50, 50, 50);
+ }
+ 
+       footer {
+           text-align: center;
+           padding: 20px 0;
+           background: rgba(34, 28, 28, 0.7);
+       }
+
+       section {
+           padding: 50px;
+           background: rgba(0, 0, 0, 0.7);
+           margin: 20px;
+           border-radius: 10px;
+           text-align: center;
+       }
+       img {
+           width: 200px; 
+           height: auto;
+           margin: 20px;
+           border-radius: 50%;
+           transition: transform 0.3s ease; 
+       }
+       img:hover {
+           transform: scale(1.1);
+       }
+       .partner-logo {
+           width: 100px; 
+           margin: 20px;
+           transition: opacity 0.3s ease;
+       }
+       .partner-logo:hover {
+           opacity: 0.7;
+       }
