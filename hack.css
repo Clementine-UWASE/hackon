@@ -18,12 +18,13 @@
        header {
            text-align: center;
            padding: 20px 0;
-           background: rgba(255, 255, 255, 0.7);
+           background: rgba(8, 0, 0, 0.7);
        }
 form,h2,input{
    color: #000;
 }
 nav {
+    position: fixed;
            background: rgba(0, 0, 0, 0.7);
            padding: 10px 0;
            width: 100%;
