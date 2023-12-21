@@ -1,0 +1,181 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+:root{
+    --pages-color:rgb(253, 250, 250);
+    --main-color:rgb(17, 189, 246);
+    --text-color:rgb(58, 58, 58);
+    --second-text-color:rgb(106, 99, 99);
+    --white-color:rgb(248, 228, 228);
+    --cover-color:linear-gradient(45deg, #00abf0,#0975a0);
+    --border:.125rem solid rgb(16, 178, 243);
+    --box-shadow:0 0 .6rem rgba(0, 0, 0, 0.2);
+}
+
+body{
+    background-image: url(cge.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+background-color: rgb(5, 5, 5);
+color: var(--text-color);
+}
+/* this is about two cover*/
+.cover{
+
+position: absolute;
+width: 50%;
+height:100%;
+top:0;
+left:0;
+background: var(--cover-color);
+box-shadow: var(--box-shadow);
+border-top-left-radius:.6rem;
+border-bottom-left-radius:.6rem;
+transform-origin: right;
+}
+
+.wrapper{
+    position: relative;
+    width:63rem;
+    height:43rem;
+    padding:3rem;
+
+}
+.cover.cover-right.turn{
+    transform:rotateY(180deg);
+  
+}
+
+.cover.cover-left{
+    z-index:-1;
+}
+/*where page stARTS*/
+.book{
+    
+position: relative;
+width: 100%;
+height: 100%;
+display: flex;
+}
+.book .book-page {
+width: 50%;
+    height: 100%;
+    background: var(--pages-color);
+    box-shadow: 0 0 .6rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    position: relative;
+    transition: transform 0.8s;}
+/*inside page*/
+.profile-page img{
+ border-radius:50% ;
+  border: .22rem solid var(--main-color);
+  margin-bottom: .7rem;
+}
+.profile-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-page h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.7rem;
+    line-height: 1;
+}
+
+p{
+    padding:20px;
+    text-align: justify;
+}
+.profile-page h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.9rem;
+    line-height: 1;
+    color: var(--main-color);
+}
+.profile-page .sociol-media{
+
+    margin: .6rem 0 0.8rem;
+}
+.profile-page .sociol-media a{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 2.5rem;
+height: 2.5rem;
+background: transparent;
+border: var(--border);
+border-radius: 50%;
+font-size:1.3rem;
+color: var(--main-color);
+margin:0.2rem;
+transition: .5s;
+}
+.profile-page .sociol-media a:hover{
+    background: var(--main-color);
+    color:var(--white-color);
+}
+/*buttons*/
+.btn{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 9.5rem;
+    height: 3rem;
+    background: var(--main-color);
+    border: var(--border);
+    border-radius: .4rem;
+    margin:20px;
+font-size: 1rem;
+color: var(--white-color);
+font-weight: 500;
+}
+.btn-box2{
+    display: flex;
+    align-items: center;
+}
+.btn-box2 .btn{
+    padding: 0.5rem 2rem ;
+}
+.btn:hover{
+background: white;
+}
+.btn.contact{
+    background: white;
+}
+.btn.contact:hover{
+    background: var(--main-color);
+}
+.page-right{
+    display: flex;
+    align-items: center;
+    padding-left:2rem;
+
+}
+
+/* page 2*/
+ .book-page .page-front
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    padding: 1.5rem 4rem;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    } 
